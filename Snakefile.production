@@ -1,0 +1,145 @@
+import pprint
+
+# ---------- conf ----------- #
+
+shell.prefix("set -e -u -o pipefail; ")
+
+
+# ---------- input ---------- #
+
+wf_input = 'input/data/production/samples.tsv'
+
+
+# ---------- output --------- #
+
+# those models are not included because
+# of poor performance during the benchmark.
+#
+# 'v1_smotenone17k', 'v1_none17k', 'v1_none17kdropout'
+
+methods = ['cupaidx', 'cuppa',
+           'transcuptomics_knn', 'transcuptomics_rf',
+           'v1_rm500', 'v1_rm500dropout']
+
+# debug
+#methods = ['v1_rm500']
+#methods = ['cupaidx']
+#methods = ['cuppa']
+#methods = ['transcuptomics_knn']
+
+wf_output = expand('tmp/40_label_standardisation/{method}/predictions.txt', method=methods)
+
+
+# ---------- rules ---------- #
+
+rule all:
+    input:
+        'tmp/48_report/report.txt'
+    #shadow: "full" # we don't use 'shadow' here so to be able to write the result in 'output' final folder
+    shell:
+        """
+        cp {input} output
+        """
+
+rule report:
+    input:
+        wf_output
+    output:
+        'tmp/48_report/report.txt'
+    shadow: "full"
+    shell:
+        """
+        sample_name=$(cat /tmp/mustcup_sample_name)
+
+        mkdir -p $(dirname {output})
+
+        steps/48_report/build_report $sample_name {input} 
+        cp report.txt {output}
+        rm report.txt
+        """
+
+rule label_standardisation:
+    input:
+        pred = 'tmp/30_format_standardisation/{method}/predictions.txt',
+        label_map = 'input/metadata/reference_labels.tsv'
+    output:
+        'tmp/40_label_standardisation/{method}/predictions.txt'
+    shadow: "full"
+    shell:
+        """
+        mkdir -p $(dirname {output})
+
+        steps/40_label_standardisation/label_normalize {input.pred} {input.label_map} {wildcards.method}
+        mv predictions.txt {output}
+        """
+
+rule format_standardisation:
+    input:
+        'tmp/20_run_method/{method}/predictions.txt'
+    output:
+        'tmp/30_format_standardisation/{method}/predictions.txt'
+    shadow: "full"
+    shell:
+        """
+        mkdir -p $(dirname {output})
+
+        steps/30_format_standardisation/{wildcards.method}/fmt_normalize {input}
+        mv predictions.txt {output}
+        """
+
+rule run_method:
+    input:
+        'tmp/10_preprocessing/{method}/samples.txt'
+    output:
+        'tmp/20_run_method/{method}/predictions.txt'
+    shadow: "full"
+    shell:
+        """
+        mkdir -p $(dirname {output})
+
+        steps/20_run_method/{wildcards.method}/launch {input}
+        cp results/predictions.txt {output}
+        """
+
+rule preprocessing:
+    input:
+        'tmp/07_normalization/{method}/samples.txt'
+    output:
+        'tmp/10_preprocessing/{method}/samples.txt'
+    shadow: "full"
+    shell:
+        """
+        mkdir -p $(dirname {output})
+
+        steps/10_preprocessing/{wildcards.method}/preproc {input} {output}
+        """
+
+rule normalization:
+    input:
+        'tmp/03_input_formatting/samples.txt'
+    output:
+        'tmp/07_normalization/{method}/samples.txt'
+    shadow: "full"
+    shell:
+        """
+        mkdir -p $(dirname {output})
+
+        steps/07_normalization/get_normalized_data.R {input} {output} {wildcards.method}
+        """
+
+rule input_formatting:
+    input:
+        wf_input
+    output:
+        'tmp/03_input_formatting/samples.txt'
+    shadow: "full"
+    shell:
+        """
+        mkdir -p $(dirname {output})
+
+        # store the sample name for later use (in '48_report' step)
+        sample_name=$(head -1 {input} | cut -f2)
+        echo $sample_name > /tmp/mustcup_sample_name
+
+        steps/03_input_formatting/format.sh {input} {output}
+        """
