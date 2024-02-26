@@ -1,0 +1,339 @@
+tool	tool_label	full_label	common_label	meta_label_L2	meta_label_L1
+CUP-AI-Dx	ACC	Adrenocortical carcinoma	ACC	ACC	tumoral
+CUP-AI-Dx	BLCA	Bladder urothelial carcinoma	BLCA	BLCA	tumoral
+CUP-AI-Dx	BRCA	Breast invasive carcinoma	BRCA	BRCA	tumoral
+CUP-AI-Dx	CESC	Cervical and endocervical cancers	CESC	CESC	tumoral
+CUP-AI-Dx	CHOL	Cholangiocarcinoma	CHOL	CHOL	tumoral
+CUP-AI-Dx	COADREAD	Colon adenocarcinoma & Rectum adenocarcinoma	COADREAD	COADREAD	tumoral
+CUP-AI-Dx	ESCA	Esophageal carcinoma	ESCA	ESCA	tumoral
+CUP-AI-Dx	GBM	Glioblastoma multiforme	GBM	Glioma	tumoral
+CUP-AI-Dx	LGG	Brain lower grade glioma	LGG	Glioma	tumoral
+CUP-AI-Dx	HNSC	Head and neck squamous cell carcinoma	HNSCC	HNSCC	tumoral
+CUP-AI-Dx	LIHC	Liver hepatocellular carcinoma	LIHC	LIHC	tumoral
+CUP-AI-Dx	LUAD	Lung adenocarcinoma	LUAD	Lung cancer	tumoral
+CUP-AI-Dx	LUSC	Lung squamous cell carcinoma	LUSC	Lung cancer	tumoral
+CUP-AI-Dx	MESO	Mesothelioma	MESO	MESO	tumoral
+CUP-AI-Dx	OV	Ovarian serous cystadenocarcinoma	OV	OV	tumoral
+CUP-AI-Dx	PAAD	Pancreatic adenocarcinoma	PAAD	pancreatic cancer	tumoral
+CUP-AI-Dx	PRAD	Prostate adenocarcinoma	PRAD	PRAD	tumoral
+CUP-AI-Dx	KICH	Kidney renal chromophobe cell carcinoma	KICH	Renal cancer	tumoral
+CUP-AI-Dx	KIRC	Kidney renal clear cell carcinoma	KIRC	Renal cancer	tumoral
+CUP-AI-Dx	KIRP	Kidney renal papillary cell carcinoma	KIRP	Renal cancer	tumoral
+CUP-AI-Dx	SARC	Sarcoma	SARC	Sarcoma	tumoral
+CUP-AI-Dx	UCS	Uterine carcinosarcoma	UCS	Sarcoma	tumoral
+CUP-AI-Dx	SKCM	Skin cutaneous melanoma	SKCM	SKCM	tumoral
+CUP-AI-Dx	STAD	Stomach adenocarcinoma	STAD	STAD	tumoral
+CUP-AI-Dx	TGCT	Testicular germ cell tumors	TGCT	TGCT	tumoral
+CUP-AI-Dx	THCA	Thyroid carcinoma	THCA	THCA	tumoral
+CUP-AI-Dx	THYM	Thymoma	THYM	THYM	tumoral
+CUP-AI-Dx	UCEC	Uterine corpus endometrial carcinoma	UCEC	UCEC	tumoral
+CUP-AI-Dx	UVM	Uveal melanoma	UVM	UVM	tumoral
+CUPPA	Cartilaginous neoplasm	Cartilaginous neoplasm	Cartilaginous neoplasm	?	tumoral
+CUPPA	Urothelial tract	Urothelial tract, Bladder-TCC	BLCA	BLCA	tumoral
+CUPPA	Breast	Breast	BRCA	BRCA	tumoral
+CUPPA	Colorectum/Appendix/SmallIntestine	Colorectum ({other or unspecified}); Appendix; Small intestine({other}), ColoRect-AdenoCA	COADREAD	COADREAD	tumoral
+CUPPA	Esophagus/Stomach	Esophagus ({excl. Nueroendocrine tumor}); Stomach ({excl. Nueroendocrine tumor}); Gastroesophageal	{ESCA,STAD}	digestive, ESCA	tumoral
+CUPPA	Anogenital	Penis, Vulva, Vagina, Anus ({excl. melanoma}), Uterus:Cervix, Cervix-AdenoCA, Cervix-SCC	{UCS,UCEC,CESC}	UCEC	tumoral
+CUPPA	Ovary/Fallopian tube	Ovary; Fallopian tube	OV	OV	tumoral
+CUPPA	Uterus: Endometrium	Uterus:Endometrium, Uterus-AdenoCA	{UCEC,CESC}	UCEC	tumoral
+CUPPA	Acute myeloid leukemia	Acute myeloid leukemia	LAML	Hematological cancer	tumoral
+CUPPA	Lymphoid tissue	Lymphoid tissue, Chronic lymphocytic leukemia	{DLBCL,FL}	Hematological cancer	tumoral
+CUPPA	Myeloproliferative neoplasm	Myeloproliferative neoplasm	Myeloproliferative neoplasm	Hematological cancer	tumoral
+CUPPA	Bile duct/Gallbladder	Bile duct; Hepatobiliary system; Gallbladder	CHOL	Hepatobiliary cancer	tumoral
+CUPPA	Liver	Liver ({excluding Nueroendocrine tumor})	LIHC	Hepatobiliary cancer	tumoral
+CUPPA	Head and neck: other	Head and neck({other})	HNSCC	HNSCC	tumoral
+CUPPA	Salivary gland/Adenoid cystic	Head and Neck:Salivary gland, Head and Neck:Parotid gland, Head and Neck:Sublingual gland, {any}(Carcinoma:Adenoid cystic carcinoma), Trachea	HNSCC	HNSCC	tumoral
+CUPPA	Kidney	Kidney	{KIRC,KIRP}	Kidney cancer	tumoral
+CUPPA	Kidney-ChRCC	Kidney-ChRCC	KICH	Kidney cancer	tumoral
+CUPPA	Lung: NET	Lung(Neuroendocrine tumor)	SCLC	Lung cancer	tumoral
+CUPPA	Lung: Non-small Cell	Lung(Carcinoma:Non-small cell carcinoma); Lung(Carcinoma:Adenocarcinoma); Lung({other}), Lung-AdenoCA, Lung-SCC	{LUSC,LUAD}	Lung cancer	tumoral
+CUPPA	Lung: Small Cell	Lung(Carcinoma:Small cell carcinoma); Lung(Carcinoma:Small cell carcinoma combined type)	SCLC	Lung cancer	tumoral
+CUPPA	Medulloblastoma	Medulloblastoma	MB	MB	tumoral
+CUPPA	Glioma	Nervous system (Glioma),CNS-GBM, CNS-Oligo	{GBM,LGG}	Glioma	tumoral
+CUPPA	Pilocytic astrocytoma	Nervous system (Pilocytic astrocytoma)	LGG	Glioma	tumoral
+CUPPA	Small intestine/Colorectum: NET	Small intestine(Neuroendocrine tumor); Colorectum(Neuroendocrine tumor)	Small intestine/Colorectum:NET	?	tumoral
+CUPPA	Mesothelium	Mesothelium	MESO	MESO	tumoral
+CUPPA	GIST	Bone/Soft tissue (Gastrointestinal stromal tumor)	GIST	?	tumoral
+CUPPA	Other	Gastrointestinal tract, Eye, Bone marrow, Nervous system({other}), Adrenal Gland, Thymus, Testis, Esophagus (Nueroendocrine tumor),Stomach (Neuroendocrine tumor), Myeloid-MDS	{ACC,PCPG,UVM,THYM,TGCT}	Other	tumoral
+CUPPA	Pancreas	Pancreas ({other>)	PAAD	Pancreatic cancer	tumoral
+CUPPA	Pancreas: NET	Pancreas (Neuroendocrine Tumor)	Pancreas:NET	Pancreatic cancer	tumoral
+CUPPA	Prostate	Prostate	PRAD	PRAD	tumoral
+CUPPA	Bone/Soft tissue: Other	Bone/Soft tissue ({other or unspecified}), Bone-Epith, Bone-Osteoblast	SARC	sarcoma	tumoral
+CUPPA	Leiomyosarcoma	Bone/Soft tissue (Leiomyosarcoma), SoftTissue-Leiomyo	SARC	Sarcoma	tumoral
+CUPPA	Liposarcoma	Bone/Soft tissue (Liposarcoma), SoftTissue-Liposarc	SARC	Sarcoma	tumoral
+CUPPA	Osteosarcoma	Bone/Soft tissue (Osteosarcoma)	SARC	Sarcoma	tumoral
+CUPPA	Melanoma	<Any, excluding Eye> (Melanoma)	SKCM	SKCM	tumoral
+CUPPA	Skin: Other	Skin ({other})	Skin:Other	?	tumoral
+CUPPA	Thyroid gland	Thyroid gland, Thy-AdenoCA	THCA	THCA	tumoral
+GTEx	Adipose - Subcutaneous	Adipose - Subcutaneous	Adipose - Subcutaneous	Adipose	normal
+GTEx	Adipose - Visceral (Omentum)	Adipose - Visceral (Omentum)	Adipose - Visceral (Omentum)	Adipose	normal
+GTEx	Adrenal Gland	Adrenal gland	Adrenal gland	Adrenal gland	normal
+GTEx	Artery - Aorta	Artery - Aorta	Artery - Aorta	Artery	normal
+GTEx	Artery - Coronary	Artery - Coronary	Artery - Coronary	Artery	normal
+GTEx	Artery - Tibial	Artery - Tibial	Artery - Tibial	Artery	normal
+GTEx	Bladder	Bladder	Bladder urothelium	Bladder urothelium	normal
+GTEx	Cells - Leukemia cell line (CML)	Cells - Leukemia cell line (CML)	CML	Blood/immune cells	normal
+GTEx	Cells - EBV-transformed lymphocytes	EBV-transformed lymphocytes	EBV-transformed lymphocytes	Blood/immune cells	normal
+GTEx	Whole Blood	Whole blood	Whole Blood	Blood/immune cells	normal
+GTEx	Brain - Anterior cingulate cortex (BA24)	Brain - Anterior cingulate cortex (BA24)	BA24	Brain	normal
+GTEx	Brain - Frontal Cortex (BA9)	Brain - Frontal cortex (BA9)	BA9	Brain	normal
+GTEx	Brain - Amygdala	Brain - Amygdala	Brain - Amygdala	Brain	normal
+GTEx	Brain - Caudate (basal ganglia)	Brain - Caudate (basal ganglia)	Brain - Caudate (basal ganglia)	Brain	normal
+GTEx	Brain - Cerebellar Hemisphere	Brain - Cerebellar hemisphere	Brain - Cerebellar hemisphere	Brain	normal
+GTEx	Brain - Cerebellum	Brain - Cerebellum	Brain - Cerebellum	Brain	normal
+GTEx	Brain - Cortex	Brain - Cortex	Brain - Cortex	Brain	normal
+GTEx	Brain - Hippocampus	Brain - Hippocampus	Brain - Hippocampus	Brain	normal
+GTEx	Brain - Hypothalamus	Brain - Hypothalamus	Brain - Hypothalamus	Brain	normal
+GTEx	Brain - Nucleus accumbens (basal ganglia)	Brain - Nucleus accumbens (basal ganglia)	Brain - Nucleus accumbens (basal ganglia)	Brain	normal
+GTEx	Brain - Putamen (basal ganglia)	Brain - Putamen (basal ganglia)	Brain - Putamen (basal ganglia)	Brain	normal
+GTEx	Brain - Spinal cord (cervical c-1)	Brain - Spinal cord (cervical c-1)	Brain - Spinal cord (cervical c-1)	Brain	normal
+GTEx	Brain - Substantia nigra	Brain - Substantia nigra	Brain - Substantia nigra	Brain	normal
+GTEx	Pituitary	Pituitary	Pituitary	Brain	normal
+GTEx	Breast - Mammary Tissue	Breast - Mammary Tissue	Breast	Breast	normal
+GTEx	Colon - Sigmoid	Colon - Sigmoid	Colorectal tissue	digestive	normal
+GTEx	Colon - Transverse	Colon - Transverse	Colorectal tissue	digestive	normal
+GTEx	Small Intestine - Terminal Ileum	Small intestine - Terminal ileum	Small Intestine - Terminal Ileum	digestive	normal
+GTEx	Stomach	Stomach	Stomach	digestive	normal
+GTEx	Esophagus - Gastroesophageal Junction	Esophagus - Gastroesophageal junction	Esophagus	Esophagus	normal
+GTEx	Esophagus - Mucosa	Esophagus - Mucosa	Esophagus	Esophagus	normal
+GTEx	Esophagus - Muscularis	Esophagus - Muscularis	Esophagus	Esophagus	normal
+GTEx	Cells - Cultured fibroblasts	Cells - Cultured fibroblasts	Transformed fibroblasts	Fibroblasts	normal
+GTEx	Cervix - Ectocervix	Cervix - Ectocervix	Cervical tissue	Gyneco	normal
+GTEx	Cervix - Endocervix	Cervix - Endocervix	Cervical tissue	Gyneco	normal
+GTEx	Fallopian Tube	Fallopian tube	Fallopian Tube	Gyneco	normal
+GTEx	Ovary	Ovary	Ovary	Gyneco	normal
+GTEx	Uterus	Uterus	Uterus	Gyneco	normal
+GTEx	Vagina	Vagina	Vagina	Gyneco	normal
+GTEx	Heart - Atrial Appendage	Heart - Atrial appendage	Heart - Atrial Appendage	Heart	normal
+GTEx	Heart - Left Ventricle	Heart - Left ventricle	Heart - Left Ventricle	Heart	normal
+GTEx	Kidney - Cortex	Kidney - Cortex	Kidney	Kidney	normal
+GTEx	Kidney - Medulla	Kidney - Medulla	Kidney	Kidney	normal
+GTEx	Liver	Liver	Liver	Liver	normal
+GTEx	Lung	Lung	Lung	Lung	normal
+GTEx	Muscle - Skeletal	Muscle - Skeletal	Muscle - Skeletal	Muscle	normal
+GTEx	Nerve - Tibial	Nerve - Tibial	Nerve - Tibial	Nerves	normal
+GTEx	Pancreas	Pancreas	Pancreas	Pancreas	normal
+GTEx	Prostate	Prostate	Prostate	Prostate	normal
+GTEx	Minor Salivary Gland	Minor salivary gland	Minor Salivary Gland	Salivary gland	normal
+GTEx	Skin - Not Sun Exposed (Suprapubic)	Skin - Not sun exposed (Suprapubic)	Skin - Not Sun Exposed (Suprapubic)	Skin	normal
+GTEx	Skin - Sun Exposed (Lower leg)	Skin - Sun exposed (Lower leg)	Skin - Sun Exposed (Lower leg)	Skin	normal
+GTEx	Spleen	Spleen	Spleen	Spleen	normal
+GTEx	Testis	Testis	Testis	Testis	normal
+GTEx	Thyroid	Thyroid	Thyroid	Thyroid	normal
+SCOPE	ACC_TS	Adrenocortical carcinoma	ACC	ACC	tumoral
+SCOPE	SKCM_NS	Adipose - Subcutaneous	Adipose - Subcutaneous	Adipose	normal
+SCOPE	PCPG_NS	Adrenal gland	Adrenal gland	Adrenal gland	normal
+SCOPE	BLCA_NS	Bladder urothelium	Bladder urothelium	Bladder urothelium	normal
+SCOPE	BLCA_TS	Bladder urothelial carcinoma	BLCA	BLCA	tumoral
+SCOPE	GBM_NS	Brain - Cerebellar hemisphere	Brain - Cerebellar hemisphere	Brain	normal
+SCOPE	BRCA_TS	Breast Ductal Carcinoma	BRCA	BRCA	tumoral
+SCOPE	BRCA_NS	Breast Duct	Breast	Breast	normal
+SCOPE	CESC_CAD_TS	Cervical and Endocervical Adenocarcinoma	CESC	CESC	tumoral
+SCOPE	CESC_SCC_TS	Cervical Squamous Cell Carcinoma	CESC	CESC	tumoral
+SCOPE	CHOL_TS	Cholangiocarcinoma	CHOL	CHOL	tumoral
+SCOPE	CHOL_NS	Cholangiocyte	Cholangiocyte	Cholangiocyte	normal
+SCOPE	COADREAD_TS	Colorectal Adenocarcinoma	COADREAD	COADREAD	tumoral
+SCOPE	COADREAD_NS	Colorectal tissue	Colorectal tissue	digestive	normal
+SCOPE	STAD_NS	Stomach	Stomach	digestive	normal
+SCOPE	ESCA_EAC_TS	Esophageal Adenocarcinoma	ESCA	ESCA	tumoral
+SCOPE	ESCA_TS	Esophageal carcinoma	ESCA	ESCA	tumoral
+SCOPE	ESCA_SCC_TS	Esophageal Squamous Cell Carcinoma	ESCA	ESCA	tumoral
+SCOPE	ESCA_NS	Esophagus	Esophagus	Esophagus	normal
+SCOPE	ESCA_EAC_NS	Esophagus	Esophagus	Esophagus	normal
+SCOPE	ESCA_SCC_NS	Esophagus	Esophagus	Esophagus	normal
+SCOPE	GBM_TS	Glioblastoma multiforme	GBM	Glioma	tumoral
+SCOPE	TFRI_GBM_NCL_TS	Glioblastoma Multiforme (TFRI cohort)	GBM	Glioma	tumoral
+SCOPE	LGG_TS	Brain lower grade glioma	LGG	Glioma	tumoral
+SCOPE	CESC_CAD_NS	Cervical and Endocervical tissue	Cervical tissue	Gyneco	normal
+SCOPE	CESC_SCC_NS	Cervical tissue	Cervical tissue	Gyneco	normal
+SCOPE	UCEC_NS	Uterus	Uterus	Gyneco	normal
+SCOPE	HNSC_NS	Head and neck normal tissue	Head and neck normal tissue	Head and neck normal tissue	normal
+SCOPE	DLBC_TS	Diffuse Large B-Cell Lymphoma	DLBCL	Hematological cancer	tumoral
+SCOPE	NCI_GPH_DLBCL_TS	Diffuse Large B-Cell Lymphoma	DLBCL	Hematological cancer	tumoral
+SCOPE	DLBC_BM_TS	DLBCL Blood/Bone Marrow	DLBCL	Hematological cancer	tumoral
+SCOPE	FL_TS	Follicular Lymphoma	FL	Hematological cancer	tumoral
+SCOPE	LAML_TS	Acute myeloid leukemia	LAML	Hematological cancer	tumoral
+SCOPE	HNSC_TS	Head and neck squamous cell carcinoma	HNSCC	HNSCC	tumoral
+SCOPE	KICH_NS	Chromophobe Renal Cell	Chromophobe Renal Cell	Kidney	normal
+SCOPE	KIRC_NS	KIRC adjacent normal	Kidney	Kidney	normal
+SCOPE	KIRP_NS	KIRP adjacent normal	Kidney	Kidney	normal
+SCOPE	LIHC_TS	Liver hepatocellular carcinoma	LIHC	LIHC	tumoral
+SCOPE	LIHC_NS	Liver	Liver	Liver	normal
+SCOPE	LUAD_NS	Lung	Lung	Lung	normal
+SCOPE	LUSC_NS	Lung	Lung	Lung	normal
+SCOPE	LUAD_TS	Lung adenocarcinoma	LUAD	Lung cancer	tumoral
+SCOPE	LUSC_TS	Lung squamous cell carcinoma	LUSC	Lung cancer	tumoral
+SCOPE	MB-Adult_TS	Adult Medulloblastoma	MB	MB	tumoral
+SCOPE	MESO_TS	Mesothelioma	MESO	MESO	tumoral
+SCOPE	SARC_NS	Muscle - Skeletal	Muscle - Skeletal	Muscle	normal
+SCOPE	OV_TS	Ovarian serous cystadenocarcinoma	OV	OV	tumoral
+SCOPE	PAAD_NS	Pancreas	Pancreas	Pancreas	normal
+SCOPE	PAAD_TS	Pancreatic adenocarcinoma	PAAD	pancreatic cancer	tumoral
+SCOPE	PCPG_TS	Pheochromocytoma and paraganglioma	PCPG	PCPG	tumoral
+SCOPE	PRAD_TS	Prostate adenocarcinoma	PRAD	PRAD	tumoral
+SCOPE	PRAD_NS	Prostate	Prostate	Prostate	normal
+SCOPE	KICH_TS	Kidney renal chromophobe cell carcinoma	KICH	Renal cancer	tumoral
+SCOPE	KIRC_TS	Kidney renal clear cell carcinoma	KIRC	Renal cancer	tumoral
+SCOPE	KIRP_TS	Papillary Renal Cell Carcinoma	KIRP	Renal cancer	tumoral
+SCOPE	SARC_TS	Sarcoma	SARC	Sarcoma	tumoral
+SCOPE	UCS_TS	Uterine carcinosarcoma ? (ou carcinoma)	UCS	Sarcoma	tumoral
+SCOPE	SKCM_TS	Skin cutaneous melanoma	SKCM	SKCM	tumoral
+SCOPE	STAD_TS	Stomach adenocarcinoma	STAD	STAD	tumoral
+SCOPE	TGCT_TS	Testicular germ cell tumors	TGCT	TGCT	tumoral
+SCOPE	THCA_TS	Thyroid carcinoma	THCA	THCA	tumoral
+SCOPE	THYM_TS	Thymoma	THYM	THYM	tumoral
+SCOPE	THYM_NS	Thymus	Thymus	Thymus	normal
+SCOPE	THCA_NS	Thyroid	Thyroid	Thyroid	normal
+SCOPE	UCEC_TS	Uterine corpus endometrial carcinoma	UCEC	UCEC	tumoral
+SCOPE	UVM_TS	Uveal melanoma	UVM	UVM	tumoral
+TCGA	ACC_TS	Adrenocortical carcinoma	ACC	ACC	tumoral
+TCGA	SKCM_NS	Adipose - Subcutaneous	Adipose - Subcutaneous	Adipose	normal
+TCGA	PCPG_NS	Adrenal gland	Adrenal gland	Adrenal gland	normal
+TCGA	BLCA_NS	Bladder urothelium	Bladder urothelium	Bladder urothelium	normal
+TCGA	BLCA_TS	Bladder Urothelial Carcinoma	BLCA	BLCA	tumoral
+TCGA	GBM_NS	Brain - Cerebellar hemisphere	Brain - Cerebellar hemisphere	Brain	normal
+TCGA	BRCA_TS	Breast invasive carcinoma	BRCA	BRCA	tumoral
+TCGA	BRCA_NS	Breast Duct	Breast	Breast	normal
+TCGA	CESC_TS	Cervical squamous cell carcinoma and endocervical adenocarcinoma	CESC	CESC	tumoral
+TCGA	CHOL_TS	Cholangiocarcinoma	CHOL	CHOL	tumoral
+TCGA	CHOL_NS	Cholangiocyte	Cholangiocyte	Cholangiocyte	normal
+TCGA	COAD_TS	Colon adenocarcinoma	COADREAD	COADREAD	tumoral
+TCGA	READ_TS	Rectum adenocarcinoma	COADREAD	COADREAD	tumoral
+TCGA	COAD_NS	Colorectal tissue	Colorectal tissue	digestive	normal
+TCGA	READ_NS	Colorectal tissue	Colorectal tissue	digestive	normal
+TCGA	STAD_NS	Stomach	Stomach	digestive	normal
+TCGA	ESCA_TS	Esophageal carcinoma	ESCA	ESCA	tumoral
+TCGA	ESCA_NS	Esophagus	Esophagus	Esophagus	normal
+TCGA	GBM_TS	Glioblastoma multiforme	GBM	Glioma	tumoral
+TCGA	LGG_TS	Brain Lower Grade Glioma	LGG	Glioma	tumoral
+TCGA	CESC_NS	Cervical tissue	Cervical tissue	Gyneco	normal
+TCGA	UCEC_NS	Uterus	Uterus	Gyneco	normal
+TCGA	HNSC_NS	Head and neck normal tissue	Head and neck normal tissue	Head and neck normal tissue	normal
+TCGA	DLBC_TS	Lymphoid Neoplasm Diffuse Large B-cell Lymphoma	DLBCL	Hematological cancer	tumoral
+TCGA	LAML_TS	Acute Myeloid Leukemia	LAML	Hematological cancer	tumoral
+TCGA	HNSC_TS	Head and Neck squamous cell carcinoma	HNSCC	HNSCC	tumoral
+TCGA	KICH_NS	Chromophobe Renal Cell	Chromophobe Renal Cell	Kidney	normal
+TCGA	KIRC_NS	KIRC adjacent normal	Kidney	Kidney	normal
+TCGA	KIRP_NS	KIRP adjacent normal	Kidney	Kidney	normal
+TCGA	LIHC_TS	Liver hepatocellular carcinoma	LIHC	LIHC	tumoral
+TCGA	LIHC_NS	Liver	Liver	Liver	normal
+TCGA	LUAD_NS	Lung	Lung	Lung	normal
+TCGA	LUSC_NS	Lung	Lung	Lung	normal
+TCGA	LUAD_TS	Lung adenocarcinoma	LUAD	Lung cancer	tumoral
+TCGA	LUSC_TS	Lung squamous cell carcinoma	LUSC	Lung cancer	tumoral
+TCGA	MESO_TS	Mesothelioma	MESO	MESO	tumoral
+TCGA	SARC_NS	Muscle - Skeletal	Muscle - Skeletal	Muscle	normal
+TCGA	OV_TS	Ovarian serous cystadenocarcinoma	OV	OV	tumoral
+TCGA	PAAD_NS	Pancreas	Pancreas	Pancreas	normal
+TCGA	PAAD_TS	Pancreatic adenocarcinoma	PAAD	pancreatic cancer	tumoral
+TCGA	PCPG_TS	Pheochromocytoma and Paraganglioma	PCPG	PCPG	tumoral
+TCGA	PRAD_TS	Prostate adenocarcinoma	PRAD	PRAD	tumoral
+TCGA	PRAD_NS	Prostate	Prostate	Prostate	normal
+TCGA	KICH_TS	Kidney Chromophobe	KICH	Renal cancer	tumoral
+TCGA	KIRC_TS	Kidney renal clear cell carcinoma	KIRC	Renal cancer	tumoral
+TCGA	KIRP_TS	Kidney renal papillary cell carcinoma	KIRP	Renal cancer	tumoral
+TCGA	SARC_TS	Sarcoma	SARC	Sarcoma	tumoral
+TCGA	UCS_TS	Uterine Carcinosarcoma	UCS	Sarcoma	tumoral
+TCGA	SKCM_TS	Skin Cutaneous Melanoma	SKCM	SKCM	tumoral
+TCGA	STAD_TS	Stomach adenocarcinoma	STAD	STAD	tumoral
+TCGA	TGCT_TS	Testicular Germ Cell Tumors	TGCT	TGCT	tumoral
+TCGA	THCA_TS	Thyroid carcinoma	THCA	THCA	tumoral
+TCGA	THYM_TS	Thymoma	THYM	THYM	tumoral
+TCGA	THYM_NS	Thymus	Thymus	Thymus	normal
+TCGA	THCA_NS	Thyroid	Thyroid	Thyroid	normal
+TCGA	UCEC_TS	Uterine Corpus Endometrial Carcinoma	UCEC	UCEC	tumoral
+TCGA	UVM_TS	Uveal Melanoma	UVM	UVM	tumoral
+transCUPtomics	Adrenocortical carcinoma	Adrenocortical carcinoma	ACC	ACC	tumoral
+transCUPtomics	Adipose - Subcutaneous	Adipose - Subcutaneous	Adipose - Subcutaneous	Adipose	normal
+transCUPtomics	Adipose - Visceral (Omentum)	Adipose - Visceral (Omentum)	Adipose - Visceral (Omentum)	Adipose	normal
+transCUPtomics	Adrenal gland	Adrenal gland	Adrenal gland	Adrenal gland	normal
+transCUPtomics	Artery - Aorta	Artery - Aorta	Artery - Aorta	Artery	normal
+transCUPtomics	Artery - Coronary	Artery - Coronary	Artery - Coronary	Artery	normal
+transCUPtomics	Artery - Tibial	Artery - Tibial	Artery - Tibial	Artery	normal
+transCUPtomics	Bladder	Bladder	Bladder urothelium	Bladder urothelium	normal
+transCUPtomics	Bladder urothelial carcinoma	Bladder urothelial carcinoma	BLCA	BLCA	tumoral
+transCUPtomics	EBV-transformed lymphocytes	EBV-transformed lymphocytes	EBV-transformed lymphocytes	Blood/immune cells	normal
+transCUPtomics	Lymph node	Lymph node	Lymph node	Blood/immune cells	normal
+transCUPtomics	Whole blood	Whole blood	Whole Blood	Blood/immune cells	normal
+transCUPtomics	Leukemia cell line (CML)	Cells - Leukemia cell line (CML)	CML	Blood/immune cells	normal
+transCUPtomics	Brain - Anterior cingulate cortex (BA24)	Brain - Anterior cingulate cortex (BA24)	BA24	Brain	normal
+transCUPtomics	Brain - Frontal cortex (BA9)	Brain - Frontal cortex (BA9)	BA9	Brain	normal
+transCUPtomics	Brain - Amygdala	Brain - Amygdala	Brain - Amygdala	Brain	normal
+transCUPtomics	Brain - Caudate (basal ganglia)	Brain - Caudate (basal ganglia)	Brain - Caudate (basal ganglia)	Brain	normal
+transCUPtomics	Brain - Cerebellar hemisphere	Brain - Cerebellar hemisphere	Brain - Cerebellar hemisphere	Brain	normal
+transCUPtomics	Brain - Cerebellum	Brain - Cerebellum	Brain - Cerebellum	Brain	normal
+transCUPtomics	Brain - Cortex	Brain - Cortex	Brain - Cortex	Brain	normal
+transCUPtomics	Brain - Hippocampus	Brain - Hippocampus	Brain - Hippocampus	Brain	normal
+transCUPtomics	Brain - Hypothalamus	Brain - Hypothalamus	Brain - Hypothalamus	Brain	normal
+transCUPtomics	Brain - Nucleus accumbens (basal ganglia)	Brain - Nucleus accumbens (basal ganglia)	Brain - Nucleus accumbens (basal ganglia)	Brain	normal
+transCUPtomics	Brain - Putamen (basal ganglia)	Brain - Putamen (basal ganglia)	Brain - Putamen (basal ganglia)	Brain	normal
+transCUPtomics	Brain - Spinal cord (cervical c-1)	Brain - Spinal cord (cervical c-1)	Brain - Spinal cord (cervical c-1)	Brain	normal
+transCUPtomics	Brain - Substantia nigra	Brain - Substantia nigra	Brain - Substantia nigra	Brain	normal
+transCUPtomics	Pituitary	Pituitary	Pituitary	Brain	normal
+transCUPtomics	Breast invasive carcinoma	Breast invasive carcinoma	BRCA	BRCA	tumoral
+transCUPtomics	Breast	Breast	Breast	Breast	normal
+transCUPtomics	Cervical squamous cell carcinoma and endocervical adenocarcinoma	Cervical squamous cell carcinoma and endocervical adenocarcinoma	CESC	CESC	tumoral
+transCUPtomics	Cholangiocarcinoma	Cholangiocarcinoma	CHOL	CHOL	tumoral
+transCUPtomics	Colon adenocarcinoma	Colon adenocarcinoma	COADREAD	COADREAD	tumoral
+transCUPtomics	Rectum adenocarcinoma	Rectum adenocarcinoma	COADREAD	COADREAD	tumoral
+transCUPtomics	Colon - Sigmoid	Colon - Sigmoid	Colorectal tissue	digestive	normal
+transCUPtomics	Colon - Transverse	Colon - Transverse	Colorectal tissue	digestive	normal
+transCUPtomics	Small intestine - Terminal ileum	Small intestine - Terminal ileum	Small Intestine - Terminal Ileum	digestive	normal
+transCUPtomics	Stomach	Stomach	Stomach	digestive	normal
+transCUPtomics	Esophageal carcinoma	Esophageal carcinoma	ESCA	ESCA	tumoral
+transCUPtomics	Esophagus - Gastroesophageal junction	Esophagus - Gastroesophageal junction	Esophagus	Esophagus	normal
+transCUPtomics	Esophagus - Mucosa	Esophagus - Mucosa	Esophagus	Esophagus	normal
+transCUPtomics	Esophagus - Muscularis	Esophagus - Muscularis	Esophagus	Esophagus	normal
+transCUPtomics	Transformed fibroblasts	Transformed fibroblasts	Transformed fibroblasts	Fibroblasts	normal
+transCUPtomics	Glioblastoma multiforme	Glioblastoma multiforme	GBM	Glioma	tumoral
+transCUPtomics	Brain lower grade glioma	Brain lower grade glioma	LGG	Glioma	tumoral
+transCUPtomics	Cervix	Cervix	Cervical tissue	Gyneco	normal
+transCUPtomics	Fallopian tube	Fallopian tube	Fallopian Tube	Gyneco	normal
+transCUPtomics	Ovary	Ovary	Ovary	Gyneco	normal
+transCUPtomics	Uterus	Uterus	Uterus	Gyneco	normal
+transCUPtomics	Vagina	Vagina	Vagina	Gyneco	normal
+transCUPtomics	Head and neck normal tissue	Head and neck normal tissue	Head and neck normal tissue	Head and neck normal tissue	normal
+transCUPtomics	Heart - Atrial appendage	Heart - Atrial appendage	Heart - Atrial Appendage	Heart	normal
+transCUPtomics	Heart - Left ventricle	Heart - Left ventricle	Heart - Left Ventricle	Heart	normal
+transCUPtomics	Diffuse large B-cell lymphoma	Diffuse large B-cell lymphoma	DLBCL	Hematological cancer	tumoral
+transCUPtomics	Acute myeloid leukemia	Acute myeloid leukemia	LAML	Hematological cancer	tumoral
+transCUPtomics	Head and neck squamous cell carcinoma	Head and neck squamous cell carcinoma	HNSCC	HNSCC	tumoral
+transCUPtomics	Kidney - Cortex	Kidney - Cortex	Kidney	Kidney	normal
+transCUPtomics	Liver hepatocellular carcinoma	Liver hepatocellular carcinoma	LIHC	LIHC	tumoral
+transCUPtomics	Liver	Liver	Liver	Liver	normal
+transCUPtomics	Lung	Lung	Lung	Lung	normal
+transCUPtomics	Lung adenocarcinoma	Lung adenocarcinoma	LUAD	Lung cancer	tumoral
+transCUPtomics	Lung squamous cell carcinoma	Lung squamous cell carcinoma	LUSC	Lung cancer	tumoral
+transCUPtomics	Small cell lung cancer	Small cell lung cancer	SCLC	Lung cancer	tumoral
+transCUPtomics	Mesothelioma	Mesothelioma	MESO	MESO	tumoral
+transCUPtomics	Muscle - Skeletal	Muscle - Skeletal	Muscle - Skeletal	Muscle	normal
+transCUPtomics	Nerve - Tibial	Nerve - Tibial	Nerve - Tibial	Nerves	normal
+transCUPtomics	Ovarian serous cystadenocarcinoma	Ovarian serous cystadenocarcinoma	OV	OV	tumoral
+transCUPtomics	Pancreas	Pancreas	Pancreas	Pancreas	normal
+transCUPtomics	Pancreatic adenocarcinoma	Pancreatic adenocarcinoma	PAAD	pancreatic cancer	tumoral
+transCUPtomics	Pancreatic neuroendocrine tumor	Pancreatic neuroendocrine tumor	PANET	pancreatic cancer	tumoral
+transCUPtomics	Pheochromocytoma and paraganglioma	Pheochromocytoma and paraganglioma	PCPG	PCPG	tumoral
+transCUPtomics	Prostate adenocarcinoma	Prostate adenocarcinoma	PRAD	PRAD	tumoral
+transCUPtomics	Prostate	Prostate	Prostate	Prostate	normal
+transCUPtomics	Kidney renal chromophobe cell carcinoma	Kidney renal chromophobe cell carcinoma	KICH	Renal cancer	tumoral
+transCUPtomics	Kidney renal clear cell carcinoma	Kidney renal clear cell carcinoma	KIRC	Renal cancer	tumoral
+transCUPtomics	Kidney renal papillary cell carcinoma	Kidney renal papillary cell carcinoma	KIRP	Renal cancer	tumoral
+transCUPtomics	Minor salivary gland	Minor salivary gland	Minor Salivary Gland	Salivary gland	normal
+transCUPtomics	Dedifferentiated liposarcoma	Dedifferentiated liposarcoma	SARC	Sarcoma	tumoral
+transCUPtomics	Leiomyosarcoma	Leiomyosarcoma	SARC	Sarcoma	tumoral
+transCUPtomics	Malignant peripheral nerve sheath tumor	Malignant peripheral nerve sheath tumor	SARC	Sarcoma	tumoral
+transCUPtomics	Synovial sarcoma	Synovial sarcoma	SARC	Sarcoma	tumoral
+transCUPtomics	Undifferentiated pleomorphic sarcoma	Undifferentiated pleomorphic sarcoma	SARC	Sarcoma	tumoral
+transCUPtomics	Uterine carcinosarcoma	Uterine carcinosarcoma	UCS	Sarcoma	tumoral
+transCUPtomics	Skin cutaneous melanoma	Skin cutaneous melanoma	SKCM	SKCM	tumoral
+transCUPtomics	Skin - Not sun exposed (Suprapubic)	Skin - Not sun exposed (Suprapubic)	Skin - Not Sun Exposed (Suprapubic)	Skin	normal
+transCUPtomics	Skin - Sun exposed (Lower leg)	Skin - Sun exposed (Lower leg)	Skin - Sun Exposed (Lower leg)	Skin	normal
+transCUPtomics	Spleen	Spleen	Spleen	Spleen	normal
+transCUPtomics	Stomach adenocarcinoma	Stomach adenocarcinoma	STAD	STAD	tumoral
+transCUPtomics	Testis	Testis	Testis	Testis	normal
+transCUPtomics	Testicular germ cell tumors	Testicular germ cell tumors	TGCT	TGCT	tumoral
+transCUPtomics	Thyroid carcinoma	Thyroid carcinoma	THCA	THCA	tumoral
+transCUPtomics	Thymoma	Thymoma	THYM	THYM	tumoral
+transCUPtomics	Thyroid	Thyroid	Thyroid	Thyroid	normal
+transCUPtomics	Uterine corpus endometrial carcinoma	Uterine corpus endometrial carcinoma	UCEC	UCEC	tumoral
+transCUPtomics	Uveal melanoma	Uveal melanoma	UVM	UVM	tumoral

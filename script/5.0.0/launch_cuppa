@@ -1,0 +1,38 @@
+#!/bin/bash
+#
+# desc
+#  run method inside a docker
+
+
+# -- args
+
+input_file="$1"
+
+
+# -- assert (the filename must be "samples.txt")
+
+input_filename="${input_file##*/}"
+if [[ $input_filename != "samples.txt" ]]; then
+    echo "assertion-error: incorrect filename ($input_filename)"
+    exit 1
+fi
+
+# -- check
+
+if ! test -f $1; then
+    echo "Error: missing input file"
+    exit 1
+fi
+
+
+# -- run
+
+cuppa -r $3 -i $(dirname $1) -o $(dirname $2)
+
+
+# -- check
+
+if ! test -f $2; then
+    echo "Error: missing output file"
+    exit 1
+fi

@@ -1,0 +1,23 @@
+{
+	"general_information": {
+		"CLUSTER_CONFIG": "/scratch3/tmp/zlidamahasolo/mustcup/cluster_config/v.5.0.0.GRCh38.cluster.config.json",
+		"PIPELINE_CONFIG": "/scratch3/tmp/zlidamahasolo/mustcup/pipeline_config/v.5.0.0.GRCh38.pipeline.config.json",
+		"REFERENCE_NAME": "GRCh38.92",
+		"PID_CRC": ""
+	},
+	"general_path": {
+		"IRODS_OUTPUT_PATH": "",
+		"CONF_PATH": "",
+		"DIR_PATH": "/scratch3/tmp/zlidamahasolo/output_mustcup",
+		"BASEDIR": "/scratch3/tmp/zlidamahasolo/output_mustcup",
+		"SCRIPT_DIR": "/scratch3/tmp/zlidamahasolo/mustcup/script/5.0.0",
+		"DB_DIR": "/scratch3/tmp/zlidamahasolo/mustcup/db",
+		"INPUT_PATH": "",
+		"EXPORT_PATH": "",
+		"SNAKEMAKE_RULES": "/scratch3/tmp/zlidamahasolo/mustcup/rules/5.0.0"
+	},
+	"transcuptomics": {
+		"REFERENCE": "/data/annotations/Human/GRCh38/index/transcuptomics/biomaRt_genes_length.txt",
+		"CLASSIFIER": "/data/annotations/Human/hg19/index/transcuptomics/transCUPtomics_classifier"
+	}
+}

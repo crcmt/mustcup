@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cp $1 $2
+
+# tsv to csv
+sed -i 's/\t/,/g' $2
