@@ -1,0 +1,8 @@
+#!/bin/bash
+#
+# desc
+#  run method inside docker
+
+# -- run
+transCUPtomics predict $1 $2 -o $3
+cp $3/predictions.csv $3/predictions.txt

@@ -1,0 +1,76 @@
+{
+	"__default__": {
+		"name": "Pipeline_cancer_WGS",
+		"tags": "snakemake,WGS_pipeline_index",
+		"volume_snakemake": "snakemake",
+		"volume_home": "home",
+		"volume_scratch3": "scratch3",
+		"volume_annotations":"annotations",
+		"cpu": 4,
+		"mem": 5,
+		"image": "seqoia-docker-tools/snakemake:6.9.0-boto3"
+	},
+	"input_formatting": {
+		"name": "input_formatting",
+		"tags": "snakemake,input_formatting",
+		"cpu": 1,
+		"mem": 2,
+		"image": "sequoia-docker-tools/snakemake:6.9.0"
+	},
+	"normalization": {
+		"name": "normalization",
+		"tags": "snakemake,normalization",
+		"cpu": 2,
+		"mem": 4,
+		"image": "sequoia-docker-tools/mustcup-utils:1.0.0"
+	},
+	"preprocessing": {
+		"name": "preprocessing",
+		"tags": "snakemake,preprocessing",
+		"cpu": 1,
+		"mem": 2,
+		"image": "sequoia-docker-tools/mustcup-utils:1.0.0"
+	},
+	"run_method_cuppa": {
+		"name": "run_method_cuppa",
+		"tags": "snakemake,run_method_cuppa",
+		"cpu": 2,
+		"mem": 4,
+		"image": "sequoia-docker-tools/cuppa:1.7-1"
+	},
+	"run_method_transcuptomics_knn": {
+		"name": "run_method_transcuptomics_knn",
+		"tags": "snakemake,run_method_transcuptomics_knn",
+		"cpu": 2,
+		"mem": 4,
+		"image": "sequoia-docker-tools/transcuptomics:2.0.1-1"
+	},
+	"run_method_transcuptomics_rf": {
+		"name": "run_method_transcuptomics_rf",
+		"tags": "snakemake,run_method_transcuptomics_rf",
+		"cpu": 2,
+		"mem": 4,
+		"image": "sequoia-docker-tools/transcuptomics:2.0.1-1"
+	},
+	"format_standardisation": {
+		"name": "format_standardisation",
+		"tags": "snakemake,format_standardisation",
+		"cpu": 1,
+		"mem": 2,
+		"image": "sequoia-docker-tools/mustcup-utils:1.0.0"
+	},
+	"label_standardisation": {
+		"name": "label_standardisation",
+		"tags": "snakemake,label_standardisation",
+		"cpu": 1,
+		"mem": 2,
+		"image": "sequoia-docker-tools/mustcup-utils:1.0.0"
+	},
+	"report": {
+		"name": "report",
+		"tags": "snakemake,report",
+		"cpu": 1,
+		"mem": 2,
+		"image": "sequoia-docker-tools/mustcup-utils:1.0.0"
+	}
+}

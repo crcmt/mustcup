@@ -1,0 +1,59 @@
+#!/usr/bin/Rscript
+
+
+# -- env
+
+#.libPaths(c("/usr/local/lib/R/site-library", .libPaths()))
+
+
+# -- args
+
+args <- commandArgs(trailingOnly = T)
+if (length(args) == 4) {
+    infile_pred <- args[[1]]
+    infile_map_tbl <- args[[2]]
+    METHOD <- args[[3]]
+    output <- args[[4]]
+}else {
+    cat("usage\n")
+    cat(" ./label_normalize <prediction-file> <mapping-file> <method-name> <ouput-file>\n")
+
+    quit(status=0, save="no")
+}
+
+
+# --libraries
+library(scales)
+
+# -- main
+# load predictions
+predicti <- read.table(infile_pred, sep="\t",header=TRUE, stringsAsFactors=FALSE)
+
+# load label-mapping table
+ref <- read.table(infile_map_tbl,sep="\t",header=TRUE, stringsAsFactors=FALSE)
+
+# normalize labels
+#if(METHOD=="cupaidx") METHOD <- "CUP-AI-Dx"
+if(METHOD=="cuppa") METHOD <- "CUPPA"
+if(METHOD=="v1_rm500") METHOD <- "SCOPE"
+if(METHOD=="v1_rm500dropout") METHOD <- "SCOPE"
+if(METHOD=="transcuptomics_knn") METHOD <- "transCUPtomics"
+if(METHOD=="transcuptomics_rf") METHOD <- "transCUPtomics"
+
+refe=ref[ref$tool== METHOD,]
+predicti$pred3=refe$common_label[which(refe$tool_label==predicti$pred3)][1]
+predicti$pred2=refe$common_label[which(refe$tool_label==predicti$pred2)][1]
+predicti$pred1=refe$common_label[which(refe$tool_label==predicti$pred1)][1]
+
+
+# float format
+if(predicti$prob1==1)predicti$prob1=0.999
+
+predicti$prob3=scientific(as.numeric(predicti$prob3), digits = 3)
+predicti$prob2=scientific(as.numeric(predicti$prob2), digits = 3)
+predicti$prob1=scientific(as.numeric(predicti$prob1), digits = 3)
+
+# -- output
+write.table(predicti, output, quote=FALSE, row.names=FALSE, col.names=TRUE, sep="\t")
+
+

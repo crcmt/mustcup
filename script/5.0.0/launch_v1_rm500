@@ -1,0 +1,35 @@
+#!/bin/bash -eu
+#
+# desc
+#  run method inside docker
+
+# -- args
+
+input_file="$1"
+
+# -- prepare i/o
+
+mkdir "in"
+mkdir "results"
+
+cp $input_file in
+
+# override with new path
+input_file="in/${input_file##*/}"
+
+# -- check
+
+[[ -e in/samples.txt ]] || echo "Error: missing input file"
+
+# -- run
+
+docker load -i docker/cancerscope/crcmt_cancerscope.tar
+
+docker run \
+    -v $PWD/in:/app/in -v $PWD/results:/app/results \
+    -e model=v1_rm500 -e input_file=${input_file} \
+    crcmt_cancerscope
+
+# -- check
+
+[[ -e results/predictions.txt ]] || echo "Error: missing output file"

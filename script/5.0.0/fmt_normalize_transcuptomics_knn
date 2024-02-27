@@ -1,0 +1,22 @@
+#!/usr/bin/Rscript
+
+#-- input
+arg=commandArgs(TRUE)
+res=read.table(arg[[1]], header=TRUE, sep=',', check.names=FALSE)
+
+#-- main
+sample=res[1,1]
+#sample=substr(sample,1,unlist(gregexpr('X', sample))[1]-1)
+res=res[,-1]
+#first=paste(gsub('\\.',' ', colnames(res[order(t(res),decreasing=TRUE)[1]])), res[order(t(res),decreasing=TRUE)[1]], sep='\t')
+first=paste(colnames(res[order(t(res),decreasing=TRUE)[1]]), res[order(t(res),decreasing=TRUE)[1]], sep='\t')
+#second=paste(gsub('\\.',' ', colnames(res[order(t(res),decreasing=TRUE)[2]])), res[order(t(res),decreasing=TRUE)[2]], sep='\t')
+second=paste(colnames(res[order(t(res),decreasing=TRUE)[2]]), res[order(t(res),decreasing=TRUE)[2]], sep='\t')
+#third=paste(gsub('\\.',' ', colnames(res[order(t(res),decreasing=TRUE)[3]])), res[order(t(res),decreasing=TRUE)[3]], sep='\t')
+third=paste(colnames(res[order(t(res),decreasing=TRUE)[3]]), res[order(t(res),decreasing=TRUE)[3]], sep='\t')
+phrase=paste(sample,first,second,third, sep="\t")
+phrase1=paste("sample","pred1","prob1","pred2","prob2","pred3","prob3",sep='\t')
+
+#-- output
+output=arg[[2]]
+write.table(rbind(phrase1,phrase),output, quote=FALSE, col.names=FALSE, row.names=FALSE, sep='\t')

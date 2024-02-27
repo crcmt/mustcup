@@ -1,0 +1,10 @@
+#!/usr/bin/Rscript
+
+args_ <- commandArgs(TRUE)
+
+in_f <- args_[[1]]
+out_f <- args_[[2]]
+
+# tsv to csv
+df_ <- read.table(in_f, sep='\t')
+write.table(df_, out_f, sep=',', quote=F, col.names=F, row.names=F)
