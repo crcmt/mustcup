@@ -33,21 +33,27 @@ predicti <- read.table(infile_pred, sep="\t",header=TRUE, stringsAsFactors=FALSE
 ref <- read.table(infile_map_tbl,sep="\t",header=TRUE, stringsAsFactors=FALSE)
 
 # normalize labels
-#if(METHOD=="cupaidx") METHOD <- "CUP-AI-Dx"
+if(METHOD=="cupaidx") METHOD <- "CUP-AI-Dx"
 if(METHOD=="cuppa") METHOD <- "CUPPA"
 if(METHOD=="v1_rm500") METHOD <- "SCOPE"
 if(METHOD=="v1_rm500dropout") METHOD <- "SCOPE"
-if(METHOD=="transcuptomics_knn") METHOD <- "transCUPtomics"
-if(METHOD=="transcuptomics_rf") METHOD <- "transCUPtomics"
+if(METHOD=="transcuptomics") METHOD <- "transCUPtomics"
 
 refe=ref[ref$tool== METHOD,]
-predicti$pred3=refe$common_label[which(refe$tool_label==predicti$pred3)][1]
-predicti$pred2=refe$common_label[which(refe$tool_label==predicti$pred2)][1]
-predicti$pred1=refe$common_label[which(refe$tool_label==predicti$pred1)][1]
+# predicti$pred3=refe$common_label[which(refe$tool_label==predicti$pred3)][1]
+# predicti$pred2=refe$common_label[which(refe$tool_label==predicti$pred2)][1]
+# predicti$pred1=refe$common_label[which(refe$tool_label==predicti$pred1)][1]
 
+for(i in 1:nrow(predicti)) {
+  if(predicti$pred1[i] %in% refe$tool_label) {
+    index <- which(refe$tool_label == predicti$pred1[i])
+    predicti$pred1[i] <- refe$common_label[index]
+  }
+}
 
 # float format
-if(predicti$prob1==1)predicti$prob1=0.999
+#if(as.numeric(predicti$prob1)==1)predicti$prob1=0.999
+predicti$prob1[as.numeric(predicti$prob1) == 1] <- 0.999
 
 predicti$prob3=scientific(as.numeric(predicti$prob3), digits = 3)
 predicti$prob2=scientific(as.numeric(predicti$prob2), digits = 3)

@@ -46,7 +46,7 @@ putHeader=paste( "sed -i \'1s/^/",Header,"\\n/\' ", arg[[2]], sep="")
 
 
 ##-- output
-if(method_name=="v1_rm500" || method_name=="v1_rm500dropout" || method_name=="transcuptomics_knn" || method_name=="transcuptomics_rf"){
+if(method_name=="v1_rm500" || method_name=="v1_rm500dropout" || method_name=="transcuptomics"){
   write.table(tpm, arg[[2]], sep='\t' , quote=FALSE, col.names=FALSE); system(putHeader)}
 if(method_name=="cuppa"){
   write.table(log2tpm, arg[[2]], sep='\t', quote=FALSE, col.names=FALSE);system(putHeader)}
