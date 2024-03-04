@@ -1,6 +1,6 @@
 rule report:
 	input:
-		expand(rules.label_standardisation.output, basedir=basedir, analysis=analysis, method=methods)
+		expand(rules.label_standardisation.output, basedir=basedir, analysis=f"{{analysis}}", method=methods)
 
 	output:
 		"{basedir}/{analysis}/report/report.txt"

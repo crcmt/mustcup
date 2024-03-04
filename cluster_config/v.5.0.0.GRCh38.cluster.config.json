@@ -38,16 +38,9 @@
 		"mem": 4,
 		"image": "sequoia-docker-tools/cuppa:1.7-1"
 	},
-	"run_method_transcuptomics_knn": {
-		"name": "run_method_transcuptomics_knn",
-		"tags": "snakemake,run_method_transcuptomics_knn",
-		"cpu": 2,
-		"mem": 4,
-		"image": "sequoia-docker-tools/transcuptomics:2.0.1-1"
-	},
-	"run_method_transcuptomics_rf": {
-		"name": "run_method_transcuptomics_rf",
-		"tags": "snakemake,run_method_transcuptomics_rf",
+	"run_method_transcuptomics": {
+		"name": "run_method_transcuptomics",
+		"tags": "snakemake,run_method_transcuptomics",
 		"cpu": 2,
 		"mem": 4,
 		"image": "sequoia-docker-tools/transcuptomics:2.0.1-1"

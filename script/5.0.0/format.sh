@@ -1,4 +1,4 @@
-#!/bin/bash -ue
+#!/bin/bash
 
 # remove the header and keep only the first and last column
 input_dir=$(dirname $1)
@@ -11,7 +11,7 @@ cat "$input_dir/$filename_no_extension.adapted.tsv" | grep -v "_PAR_Y" > "$input
 
 # remove version
 #cat "$input_dir/without_PAR.tsv" | sed '2,$s/^\([^.\t]\+\)[^\t]*/\1/' > "$input_dir/without_version.tsv"
-cat "$input_dir/$filename_no_extension.without_PAR.tsv" > "$input_dir/$filename_no_extension.without_version.tsv"
+cat "$input_dir/$filename_no_extension.without_PAR.tsv" | sed '2,$s/^\([^.\t]\+\)[^\t]*/\1/' > "$input_dir/$filename_no_extension.without_version.tsv"
 
 
 cp "$input_dir/$filename_no_extension.without_version.tsv" $2

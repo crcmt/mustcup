@@ -3,21 +3,18 @@
 # get sample name
 sample=${1}
 echo "---------------- SAMPLE: $sample --------------------" > $2
-
 for f in "${@:3}"; do
-    # get prediction
-    # pred=$(sed -n '2p' "$f" | awk 'BEGIN {FS = OFS = "\t"}{print $2}') # second line (first is header) and second col (first is sample id)
-    pred=$(sed -n '2p' "$f" | awk 'BEGIN {FS ="\t";OFS = ""}{print $2," (",$3,") ", $4," (",$5,") ",$6," (",$7,") " }')
-
-    # extract model
-    #
-    # sample
-    #  from ../../tmp/40_label_standardisation/v1_rm500/predictions.txt
-    #  to   v1_rm500
-    #
-    model=$(echo "$f" | sed 's|.*/\([^/]*\)/[^/]*$|\1|')
-
-    echo "$model: $pred" >> $2
+	model=$(echo "$f" | sed 's|.*/\([^/]*\)/[^/]*$|\1|')
+	if [[ $model = "cuppa" ]]; then
+		# get prediction
+		pred=$(sed -n '2p' "$f" | awk 'BEGIN {FS ="\t";OFS = ""}{print $2," (",$3,") ", $4," (",$5,") ",$6," (",$7,") " }')
+		echo "$model: $pred" >> $2
+	elif [[ $model == *"transcuptomics"* ]]; then
+		pred_knn=$(sed -n '/^transcuptomics_knn/p' "$f" | awk 'BEGIN {FS ="\t";OFS = ""}{print $3," (",$4,") ", $5," (",$6,") ",$7," (",$8,") " }')
+		echo "transcuptomics_knn: $pred_knn" >> $2
+		pred_rf=$(sed -n '/^transcuptomics_rf/p' "$f" | awk 'BEGIN {FS ="\t";OFS = ""}{print $3," (",$4,") ", $5," (",$6,") ",$7," (",$8,") " }')
+		echo "transcuptomics_rf: $pred_rf" >> $2
+	else
+		echo "To do"
+	fi	
 done
-
-#echo test89 > report.txt
